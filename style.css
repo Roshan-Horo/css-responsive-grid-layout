@@ -91,6 +91,12 @@ h1,h2,strong{
     font-weight: 700;
     margin-top: 0.5em;
     text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.5s ease 0s;
+}
+.btn:hover{
+     transform: scale(1.1)
+
 }
 
 .btn-primary{
