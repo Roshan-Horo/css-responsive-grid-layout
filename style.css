@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    /* outline: 1px solid magenta; */
 }
 
 body{
@@ -135,13 +136,115 @@ h1,h2,strong{
     }
 }
 
+/* navigation */
+
+.header{
+    background:black;
+    
+}
+.header-home{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    grid-column: 2/-2;
+}
+.logo-link{
+    background: #FFE600;
+    padding-top: 2rem;   
+}
+.nav{
+    position: fixed;
+    background: #000;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    transition: transform .5s ease 0s;
+}
+.navigation-open{
+    transform: translateX(-100%);
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    color: #FFE600;
+    cursor: pointer;
+}
+
+.close-nav{
+    background:0;
+    color: #FFE600;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 0;
+    position: absolute;
+}
+.open-nav{
+    border: 0;
+    background: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-left: auto;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media (min-width: 600px){
+    .open-nav,
+    .close-nav{
+        display: none;
+    }
+    .header-home .nav{
+        background: transparent;
+    }
+
+    .nav{
+        position: initial;
+    }
+    .nav-list{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .nav-item{
+        margin-left: 2rem;
+    }
+    .nav-link{
+        font-size: 1rem;
+    }
+}
+
 /* ==================
       hero area
 =================== */
 
 .hero{
     background-image: url("img/hero-bg.jpg");
-    padding: 4em 0;
+    padding: 8em 0 4em;
     color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
@@ -152,9 +255,15 @@ h1,h2,strong{
     grid-column: 2 / -2;
 }
 
+@media (min-width: 400px) {
+    .hero > * {
+        margin-right: 20%;
+    }
+}
+
 @media (min-width: 600px){
     .hero{
-        padding: 6em 0;
+        padding: 10em 0;
     }
     .hero > *{
        grid-column: 2 / span 2;
