@@ -281,7 +281,7 @@ h1,h2,strong{
 =================== */
 
 .hero{
-    background-color: #404040;
+    background-color: #000;
     background-image: url("img/hero-bg.jpg");
     padding: 8em 0 4em;
     color: #fff;
