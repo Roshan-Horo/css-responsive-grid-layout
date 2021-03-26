@@ -9,3 +9,5 @@ closeNav.addEventListener('click', () => {
 openNav.addEventListener('click', () => {
     nav.classList.add('navigation-open')
 })
+
+// test
